@@ -1,18 +1,4 @@
-# NST DVA Capstone 2 - Project Repository
-
-> **Newton School of Technology | Data Visualization & Analytics**
-> A 2-week industry simulation capstone using Python, GitHub, and Tableau to convert raw data into actionable business intelligence.
-
----
-
-## Before You Start
-
-1. Rename the repository using the format `SectionName_TeamID_ProjectName`.
-2. Fill in the project details and team table below.
-3. Add the raw dataset to `data/raw/`.
-4. Complete the notebooks in order from `01` to `05`.
-5. Publish the final dashboard and add the public link in `tableau/dashboard_links.md`.
-6. Export the final report and presentation as PDFs into `reports/`.
+# NYC Real Estate Sales Analysis
 
 ### Quick Start
 
@@ -40,22 +26,18 @@ If you are working in Google Colab:
 | **Project Title** | NYC Real Estate Sales Analysis |
 | **Sector** | Real Estate / Finance |
 | **Team ID** | Shadow-InsightX |
-| **Section** | _To be filled by team_ |
-| **Faculty Mentor** | _To be filled by team_ |
 | **Institute** | Newton School of Technology |
-| **Submission Date** | _To be filled by team_ |
+| **Submission Date** | 28-04-2026 |
 
 ### Team Members
 
 | Role | Name | GitHub Username |
 |---|---|---|
-| Project Lead | Amrit Mahto | `THE-Amrit-mahto-05` |
-| Data Lead | Anuj Chhajed | `anujchhajed` |
-| ETL Lead | _To be filled_ | `github-handle` |
-| Analysis Lead | _To be filled_ | `github-handle` |
-| Visualization Lead | _To be filled_ | `github-handle` |
-| Strategy Lead | _To be filled_ | `github-handle` |
-| PPT and Quality Lead | _To be filled_ | `github-handle` |
+| Project/Visualization Lead | Amrit Mahto | [THE-Amrit-mahto-05](https://github.com/THE-Amrit-mahto-05) |
+| Data/Analysis Lead | Anuj Chhajed | [Anuj-Chhajed](https://github.com/Anuj-Chhajed) |
+| ETL Lead | Ayush Kumar | [Ayush123-e](https://github.com/Ayush123-e) |
+| Strategy Lead | Parth Tandalwade | [parth-tandalwade](https://github.com/parth-tandalwade) |
+| PPT and Quality Lead | Nakul Sharma | [29naks2005](https://github.com/29naks2005) |
 
 ---
 
@@ -77,7 +59,7 @@ The New York City real estate market — one of the world's largest — processe
 
 | Attribute | Details |
 |---|---|
-| **Source Name** | NYC Department of Finance — Rolling Sales Data (via Kaggle) |
+| **Source Name** | NYC Property Sales (via Kaggle) |
 | **Direct Access Link** | [https://www.kaggle.com/datasets/new-york-city/nyc-property-sales](https://www.kaggle.com/datasets/new-york-city/nyc-property-sales) |
 | **Row Count** | 84,548 (raw) → 57,601 (cleaned) |
 | **Column Count** | 21 (raw) → 31 (after feature engineering) |
@@ -123,7 +105,7 @@ Document KPI logic clearly in `notebooks/04_statistical_analysis.ipynb` and `not
 
 | Item | Details |
 |---|---|
-| **Dashboard URL** | _[Paste Tableau Public link here after publishing]_ |
+| **Dashboard URL** | https://public.tableau.com/views/NYCproperty/Dashboard2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link |
 | **Executive View** | **Sales by Borough** — Stacked horizontal bar chart showing total sales value across all 5 boroughs, colour-segmented by price bracket (<250K through 5M+). Manhattan dominates at $26.6B total value. **Sales Trend by Year** — Multi-line chart tracking year-over-year sales value per borough, revealing Manhattan's steep growth from $8.7B to $18.7B. |
 | **Operational View** | **Avg Price/Sqft by Building Class** — Bar chart comparing average PPSF across 28 building class categories (Condo Hotels lead at $2,789/sqft). **Neighbourhood Sales Volume** — Top 10 neighbourhoods ranked by total sales value (Upper East Side leads at $2.67B). **Price Bracket Count by Quarter** — Multi-line trend showing quarterly transaction counts across 6 price tiers, validating the Q2 seasonal volume peak. |
 | **Main Filters** | Borough Name, Neighbourhood, Sale Year, Price Bracket (colour encoding), Tooltips (SUM Sale Price, AVG PPSF, CNT Total Units) |
@@ -168,19 +150,12 @@ Shadow-InsightX/
 |
 |-- data/
 |   |-- raw/                         # Original dataset (never edited)
-|   |   `-- nyc-rolling-sales.csv    # 84,548 rows × 21 columns
 |   `-- processed/                   # Cleaned output from ETL pipeline
-|       |-- cleaned_data.csv         # 57,601 rows × 31 columns
-|       |-- final_dashboard_data.csv # Tableau-ready export
-|       |-- final_borough_summary.csv
-|       |-- final_property_summary.csv
-|       |-- final_time_series.csv
-|       `-- final_kpi_data.csv
 |
 |-- notebooks/
 |   |-- 01_extraction.ipynb
 |   |-- 02_cleaning.ipynb
-|   |-- 03_exploratory_data_analysis.ipynb
+|   |-- 03_eda.ipynb
 |   |-- 04_statistical_analysis.ipynb
 |   `-- 05_final_load_prep.ipynb
 |
@@ -189,11 +164,6 @@ Shadow-InsightX/
 |
 |-- tableau/
 |   |-- screenshots/
-|   |   |-- salebBorough.png
-|   |   |-- salestrend.png
-|   |   |-- averagePrice.png
-|   |   |-- neighborhoddsales.png
-|   |   `-- salesprice.png
 |   `-- dashboard_links.md
 |
 |-- reports/
@@ -260,37 +230,32 @@ The project follows a structured 7-step workflow:
 - [x] `data/raw/` contains the original, unedited dataset
 - [x] `data/processed/` contains the cleaned pipeline output
 - [x] `tableau/screenshots/` contains dashboard screenshots
-- [ ] `tableau/dashboard_links.md` contains the Tableau Public URL
-- [ ] `docs/data_dictionary.md` is complete
+- [x] `tableau/dashboard_links.md` contains the Tableau Public URL
+- [x] `docs/data_dictionary.md` is complete
 - [x] `README.md` explains the project, dataset, and team
-- [ ] All members have visible commits and pull requests
+- [x] All members have visible commits and pull requests
 
 **Tableau Dashboard**
 
-- [ ] Published on Tableau Public and accessible via public URL
+- [x] Published on Tableau Public and accessible via public URL
 - [x] At least one interactive filter included
 - [x] Dashboard directly addresses the business problem
 
 **Project Report**
 
-- [ ] Final report exported as PDF into `reports/`
+- [x] Final report exported as PDF into `reports/`
 - [x] Cover page, executive summary, sector context, problem statement
 - [x] Data description, cleaning methodology, KPI framework
 - [x] EDA with written insights, statistical analysis results
 - [x] Dashboard screenshots and explanation
 - [x] 8-12 key insights in decision language
 - [x] 3-5 actionable recommendations with impact estimates
-- [ ] Contribution matrix matches GitHub history
+- [x] Contribution matrix matches GitHub history
 
 **Presentation Deck**
 
-- [ ] Final presentation exported as PDF into `reports/`
-- [ ] Title slide through recommendations, impact, limitations, and next steps
-
-**Individual Assets**
-
-- [ ] DVA-oriented resume updated to include this capstone
-- [ ] Portfolio link or project case study added
+- [x] Final presentation exported as PDF into `reports/`
+- [x] Title slide through recommendations, impact, limitations, and next steps
 
 ---
 
@@ -300,24 +265,17 @@ This table must match evidence in GitHub Insights, PR history, and committed fil
 
 | Team Member | Dataset and Sourcing | ETL and Cleaning | EDA and Analysis | Statistical Analysis | Tableau Dashboard | Report Writing | PPT and Viva |
 |---|---|---|---|---|---|---|---|
-| Amrit Mahto | Owner | Support | Support | Support | Owner | Support | Support |
-| Anuj Chhajed | Support | Owner | Owner | Owner | Support | Owner | Support |
-| _Member 3_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ |
-| _Member 4_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ |
-| _Member 5_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ |
-| _Member 6_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ | _Owner / support_ |
+| Amrit Kumar Mahto | Owner | Support | Support | Support | Owner | Support | Support |
+| Anuj Chhajed | Support | Support | Owner | Support | Support | Owner | Support |
+| Nakul Sharma | Support | Support | Support | Support | Support | Owner | Owner |
+| Ayush Kumar | Support | Owner | Support | Support | Support | Support | Support |
+| Parth Tandalwade | Support | Support | Support | Owner | Support | Support | Support |
 
 _Declaration: We confirm that the above contribution details are accurate and verifiable through GitHub Insights, PR history, and submitted artifacts._
 
-**Team Lead Name:** _____________________________
+**Team Lead Name:** Amrit Kumar Mahto
 
-**Date:** _______________
-
----
-
-## Academic Integrity
-
-All analysis, code, and recommendations in this repository must be the original work of the team listed above. Free-riding is tracked via GitHub Insights and pull request history. Any mismatch between the contribution matrix and actual commit history may result in individual grade adjustments.
+**Date:** April 28, 2026
 
 ---
 
